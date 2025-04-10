@@ -1,0 +1,20 @@
+.fade-tab-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  .fade-tab-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 300ms ease;
+  }
+  
+  .fade-tab-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-tab-exit-active {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 300ms ease;
+  }
+  

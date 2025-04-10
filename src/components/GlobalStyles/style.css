@@ -532,6 +532,13 @@ h1,h2,h3,h4,h5,h6 {
   --bs-nav-tabs-link-hover-border-color: transparent;
   --bs-nav-tabs-link-active-border-color: #fff;
 }
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+.nav-tabs {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .product-tabs .nav-tabs .nav-link.active, 
 .product-tabs .nav-tabs .nav-item.show .nav-link {
   /* border: none; */
@@ -566,13 +573,11 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
 .product-item figure {
-  background: #F9F9F9;
   border-radius: 12px;
   text-align: center;
 }
 .product-item figure img {
   max-height: 210px;
-  max-width: 400px;
   height: auto;
 }
 .product-item .btn-wishlist {

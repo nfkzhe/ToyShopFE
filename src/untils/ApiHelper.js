@@ -44,7 +44,6 @@ const getAllCategories = async () => {
     try {
         const response = await AxiosInstance()
             .get('categories/');
-        console.log("res",response)
         if (response.status === 200) {
             return response.data;
         }
@@ -59,7 +58,6 @@ const getProductsByCategory = async (categoryId) => {
     try {
         const response = await AxiosInstance()
             .get(`product/getbycate?category=${categoryId}`);
-            console.log("resProduct",response.data)
         if (response.status == 200) {
             return response.data;
         }else{
