@@ -35,7 +35,7 @@ function CartPage() {
         <div className="container mt-5">
             <h2 className="mb-4">🛒 Giỏ hàng của bạn</h2>
             {cartItems.length === 0 ? (
-                <p>Không có sản phẩm nào trong giỏ.</p>
+                <p>Không có sản phẩm nào trong giỏ!!!</p>
             ) : (
                 <>
                     <ul className="list-group mb-4">
