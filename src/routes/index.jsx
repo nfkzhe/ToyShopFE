@@ -1,4 +1,4 @@
-import AddCate from '~/pages/AddCate';
+import AddCate from '~/pages/AddCate/index';
 import CartPage from '~/pages/Cart';
 import Home from '~/pages/Home';
 import LoginPage from '~/pages/Login';
