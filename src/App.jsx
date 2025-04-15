@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
-import { DefaultLayout } from '~/components/Layout/Index';
+import { DefaultLayout } from '~/components/Layout/index';
 import { Fragment, useEffect } from 'react';
 import { CartProvider, useCart } from '~/contexts/CartContext';
 import CartOffcanvas from '~/components/CartOffCanvas';
