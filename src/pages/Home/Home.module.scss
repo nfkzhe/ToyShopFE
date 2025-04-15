@@ -1,0 +1,16 @@
+.itemSize {
+    flex-shrink: 0;
+    width: 233.667px;
+    position: relative;
+    transition-property: transform;
+    display: block;
+}
+.backgroundHome {
+    background-image: url('../../../public/images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;
+}
+.addImg{
+    background:url('../../../public/images/ad-image-1.png') no-repeat;background-position: right bottom;
+}
+.addImg2{
+    background:url('../../../public/images/ad-image-2.png') no-repeat;background-position: right bottom;
+}
