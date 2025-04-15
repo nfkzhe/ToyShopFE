@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import { getProductDetail } from '~/untils/ApiHelper';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
-import ProductDescription from '~/components/Product/ProductDescription';
+import ProductDescription from '~/components/Product/productDescription';
 import ZoomLens from '~/components/Product/ZoomLens';
 import { useCart } from '../../contexts/CartContext';
 const ProductDetail = () => {
