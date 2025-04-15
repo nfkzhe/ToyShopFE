@@ -1,4 +1,3 @@
-import AddCate from '~/pages/AddCate/index';
 import CartPage from '~/pages/Cart';
 import Home from '~/pages/Home';
 import LoginPage from '~/pages/Login';
@@ -10,7 +9,6 @@ const publicRoutes = [
     { path: '/', component: Home },
     { path: '/profile', component: Profile },
     { path: '/product/detail/:id', component: Product },
-    { path: '/addCate', component: AddCate, layout: null },
     { path: '/cart', component: CartPage },
     { path: '/login', component: LoginPage, layout: null },
     { path: '/danhmuc/:id', component: ProductByCate },
