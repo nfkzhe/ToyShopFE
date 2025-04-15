@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const AxiosInstance = (token = '', contentType = 'application/json') => {
+const AxiosInstance = (contentType = 'application/json') => {
     const axiosInstance = axios.create({
-        baseURL: 'http://192.168.1.2:3002/api/'
+        baseURL: 'http://192.168.2.130:3002/api/'
     });
     // cmd -----> ipconfig -----> IPv4 Address (192.168.1.1)
     axiosInstance.interceptors.request.use(
         async (config) => {
-            // const token = '';
+            const token = JSON.parse(localStorage.getItem("token"))
             config.headers = {
                 'Authorization': `Bearer ${token}`,
                 'Accept': 'application/json',
@@ -19,7 +19,7 @@ const AxiosInstance = (token = '', contentType = 'application/json') => {
     );
 
     axiosInstance.interceptors.response.use(
-        res => res.data,
+        res => res,
         err => Promise.reject(err)
     );
     return axiosInstance;

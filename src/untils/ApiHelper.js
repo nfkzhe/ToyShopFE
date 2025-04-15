@@ -23,15 +23,12 @@ const register = async (data) => {
 // đăng nhập
 const login = async (data) => {
     try {
-        const { email, password } = data;
-        const body = {
-            email: email,
-            password: password
-        }
-        const response = await AxiosInstance()
-            .post('user/login', body);
-        if (response.status == 200) {
-            return response.user;
+        const { email, pass } = data;
+        const body = { email, pass };
+
+        const response = await AxiosInstance().post('user/login', body);
+        if (response.status === 200) {
+            return response.data; // Trả về { message, data, token }
         }
     } catch (error) {
         console.log(error);
@@ -75,7 +72,7 @@ const getProductDetail = async (productId) => {
         const response = await AxiosInstance()
             .get(`products/detail/${productId}`);
         if (response.status == 200) {
-            return response;
+            return response.data;
         } else {
             console.log("Unexpected response:", response);
         }
@@ -96,9 +93,20 @@ const getTopSold = async () => {
         console.log(error);
     }
 }
+const getUser = async (userId) => {
+    try {
+        const response = await AxiosInstance().get(`/user/find`);
+        if(response.status == 200) {
+            return response.data
+        }
+    }catch (error) {
+        console.log(error);
+    }
+}
 
 export {
     register, login,
     getAllCategories, getProductsByCategory,
-    getProductDetail, getTopSold
+    getProductDetail, getTopSold,
+    getUser
 };
