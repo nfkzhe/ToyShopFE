@@ -1,7 +1,7 @@
 import CartPage from '~/pages/Cart';
 import Home from '~/pages/Home';
 import LoginPage from '~/pages/Login';
-import Product from '~/pages/Product';
+import Product from '~/pages/Product/Index';
 import ProductByCate from '~/pages/ProductByCate';
 import Profile from '~/pages/Profile';
 
